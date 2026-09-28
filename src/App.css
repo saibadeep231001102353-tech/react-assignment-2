@@ -1,0 +1,46 @@
+/* ==========================================================================
+   App Component Stylesheet
+   ========================================================================== */
+
+.eduportal-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Subtle background glow effects */
+.eduportal-app::before {
+  content: '';
+  position: fixed;
+  top: -150px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.eduportal-app::after {
+  content: '';
+  position: fixed;
+  bottom: 100px;
+  left: -150px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.portal-main-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
